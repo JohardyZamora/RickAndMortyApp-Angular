@@ -1,0 +1,82 @@
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-title">
+                    <h2 class="h2">Lista de personajes - Rick and Morty</h2>
+                </div>
+                <div class="card-body">
+                    <section id="buttons">
+                        <div class="container">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary" (click)="Ver()">Ver Objeto</button>
+                                <button type="button" class="btn btn-secondary" (click)="VerItems()" >Ver items agregados</button>
+                                <button type="button" class="btn btn-danger" (click)="Clear()" >Limpiar</button>
+                              </div>
+                        </div>
+                    </section>
+                    
+                    <section id="lista">
+                        <div class="container py-4">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Opcion</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Species</th>
+                                    <th scope="col">Type</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let item of characters.results; let i = index">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td><button class="btn btn-sm btn-primary" (click)="Add(item.id)">+</button></td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.status}}</td>
+                                    <td>{{item.species}}</td>
+                                    <td>{{item.type}}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <section id="dashboard">
+                <div class="container py-5">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col" *ngFor="let item of lista; let i = index">
+                          <div class="card h-100">
+                            <img src="{{item.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{item.name}}</h5>
+                              <p class="card-text">Genero: {{item.gender}}</p>
+                              <p class="card-text">Specie: {{item.species}}</p>
+                              <p class="card-text">Status: {{item.status}}</p>
+                              <div>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">Location: {{item.location.name}}</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
