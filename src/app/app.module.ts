@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
 import { DxButtonModule } from 'devextreme-angular';
 import { DxDataGridModule } from 'devextreme-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DxDataGridModule } from 'devextreme-angular';
     AppRoutingModule,
     HttpClientModule,
     DxButtonModule,
-    DxDataGridModule
+    DxDataGridModule,
+    FormsModule
   ],
   providers: [DashboardService],
   bootstrap: [AppComponent]
