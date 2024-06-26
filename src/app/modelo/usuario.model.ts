@@ -1,5 +1,6 @@
 export interface Usuario {
-    UserId: number,
-    Name: string,
-    Active: boolean
+    userId?: number,
+    name: string,
+    password: string,
+    active?: boolean
 }

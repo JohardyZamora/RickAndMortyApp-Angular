@@ -11,6 +11,8 @@ import { PersonajesComponent } from './componentes/personajes/personajes.compone
 import { DxButtonModule } from 'devextreme-angular';
 import { DxDataGridModule } from 'devextreme-angular';
 import { FormsModule } from '@angular/forms';
+import { LoginService } from './servicios/login.service';
+import { AuthGuard } from './Guardianes/auth.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     DxDataGridModule,
     FormsModule
   ],
-  providers: [DashboardService],
+  providers: [DashboardService, LoginService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
