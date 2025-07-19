@@ -37,7 +37,6 @@ export class PersonajesComponent implements OnInit {
 
   selectEmployee(e: any) {
     console.log('entro');
-
     e.component.byKey(e.currentSelectedRowKeys[0]).done((persona: Personajes) => {
         if(persona) {
             this.selectedPersona = persona;

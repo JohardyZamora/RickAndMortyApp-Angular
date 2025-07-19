@@ -28,7 +28,7 @@ export class DashboardService{
                 'Authorization': token
             })
         };
-        return this.httpClient.get<Usuario[]>('https://localhost:7038/GetUsers', httpOptions).pipe(
+        return this.httpClient.get<Usuario[]>('https://localhost:44312/GetUsers', httpOptions).pipe(
             catchError(this.handleError)
         );
     }
@@ -42,7 +42,7 @@ export class DashboardService{
                 'Authorization': token
             })
         };
-        return this.httpClient.delete('https://localhost:7038/DeleteUser?idUser=' + id, options).pipe(
+        return this.httpClient.delete('https://localhost:44312/DeleteUser?idUser=' + id, options).pipe(
             catchError(this.handleError)
         );
     }
